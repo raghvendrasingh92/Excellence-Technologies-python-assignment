@@ -1,1 +1,66 @@
+Question1
+Use python lists and make an list of numbers.
+Write a function which returns sum of the list of numbers
+Solution:
+# creating a list
+list1 = [10, 20, 30, 40, 50]
+# creating sum_list function
+def SumOfList(list1):
+   return sum(list1)   
+total = SumOfList(list1)
+print("Sum of all elements in given list: ", total)
+Output:-
+Sum of all elements in given list:  150.
+
+Question2 
+Solution:
+#Creating a dictionary having key value pair of key and name
+Dict1 = {"1":'Raghu',"2":'Singh',"3":'Rajput',"4":'Yadu',"5":'raj',"6":'Vanshu',"5":'Som',"6":'Somya',"7":'Bulbul',"8":'Abhi',"9":'Aman',"10":'Cheeku',"11":'Bittu',"12":'Anuj',"13":'Sunil',"14":'Misty',"15":'Subh'}
+
+#Creating a dictionary having key value pair of key and score
+Dict2 = {'1': 300, "2": 450, "3": 505, "4": 196, "5": 259, "6": 368, "7": 493, "8": 654, "9": 481, "10": 440, "11": 421, "12": 444, "13": 569, "14": 396, "15": 325}
+
+def Max_dict(Dict2):
+    #maximum = max(Dict2, key=Dict2.get) 
+    #maximum = max(zip(Dict2.values(), Dict2.keys()))
+    v=list(Dict2.values())
+    k=list(Dict2.keys())
+    return k[v.index(max(v))],max(v)
+    #return maximum
+    
+maximum_dictionary,v = Max_dict(Dict2) 
+
+print ("Maximum dictionary is: ", maximum_dictionary,v )
+Output:
+Maximum dictionary is:  8 654
+
+Question 3
+Solution:-
+# array arr[0..n-1] 
+def Max_length(arr, array_length): 
+    # intitialize count 
+    count = 0 
+    # initialize result
+    result = 0 
+    for i in range(0, array_length): 
+        if (arr[i] == 0): 
+            count = 0
+        # If 1 is found, increment count and update result if count becomes more. 
+        else:
+            # increase count 
+            count += 1 
+            result = max(result, count)  
+    return result  
+  
+#Creating array
+arr = [0,0,0,1,1,1,0,0,0,1,1,0,1,1,1,1,1,0,0,1,1]  
+array_length = len(arr)   
+print("Number of maximum consecutive  one’s present in the array: ", Max_length(arr, array_length)) 
+Output:-
+Number of maximum consecutive  one’s present in the array:  5
+
+
+
+
+
 
